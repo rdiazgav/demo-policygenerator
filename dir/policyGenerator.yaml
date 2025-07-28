@@ -4,13 +4,15 @@ metadata:
   name: policy-generator-example
 policyDefaults:
   namespace: default
+  remediationAction: inform
   placement:
     labelSelector:
-      environment=prod
-  remediationAction: inform
+      matchExpressions:
+        - key: environment
+          operator: In
+          values:
+            - prod
 policies:
   - name: openshift-gitops-installed
     manifests:
       - path: openshift-gitops-subscription.yaml
-
-    
