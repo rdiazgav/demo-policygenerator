@@ -6,7 +6,7 @@ policyDefaults:
   namespace: default
   placement:
     labelSelector:
-      rhdp_usage: development
+      environment=prod
   remediationAction: inform
 policies:
   - name: openshift-gitops-installed
