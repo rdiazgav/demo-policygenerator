@@ -12,6 +12,7 @@ policyDefaults:
           operator: In
           values:
             - prod
+            - qa
 policies:
   - name: openshift-gitops-installed
     manifests:
