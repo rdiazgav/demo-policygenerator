@@ -12,6 +12,10 @@ policyDefaults:
         operator: In
         values:
         - prod
+      - key: rhdp_usage
+        operator: In
+        values:
+        - development
 policies:
   - name: openshift-gitops-installed
     manifests:
