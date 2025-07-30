@@ -13,6 +13,7 @@ policyDefaults:
           values:
             - prod
             - qa
+    selectorType: LabelSelector
 policies:
   - name: openshift-gitops-installed
     manifests:
