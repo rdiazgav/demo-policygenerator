@@ -7,13 +7,7 @@ policyDefaults:
   remediationAction: inform
   placement:
     labelSelector:
-      matchExpressions:
-        - key: environment
-          operator: In
-          values:
-            - prod
-            - qa
-    selectorType: LabelSelector
+      environment: prod
 policies:
   - name: openshift-gitops-installed
     manifests:
