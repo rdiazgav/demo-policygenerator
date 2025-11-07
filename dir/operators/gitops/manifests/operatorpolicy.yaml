@@ -4,13 +4,15 @@ metadata:
   name: gitops-operator-install
   namespace: acm-policies
 spec:
+  complianceType: musthave        
   remediationAction: enforce
+  severity: medium                
   subscription:
     name: openshift-gitops-operator
     namespace: openshift-operators
     source: redhat-operators
     sourceNamespace: openshift-marketplace
-    channel: latest         
+    channel: latest               
   upgradeApproval: Automatic
   removalBehavior:
     subscriptions: Delete
