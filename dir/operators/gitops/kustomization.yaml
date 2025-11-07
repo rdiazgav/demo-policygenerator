@@ -3,7 +3,7 @@ kind: Kustomization
 
 
 resources:
-  - ../../governance/placements/placement-prod.yaml
+  - ./placements/placement-prod.yaml
 
 generators:
   - ./generator.yaml
