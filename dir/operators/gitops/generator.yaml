@@ -1,0 +1,21 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: gen-gitops-operator
+
+policyDefaults:
+  namespace: acm-policies
+  remediationAction: enforce
+  consolidateManifests: false
+  placement:
+    placementName: env-bound-placement   
+
+placementBindingDefaults:
+  name: gitops-binding
+
+policies:
+  - name: gitops-operator
+    description: "Install OpenShift GitOps operator"
+    manifests:
+      - path: manifests/namespace.yaml
+      - path: manifests/operatorpolicy.yaml
