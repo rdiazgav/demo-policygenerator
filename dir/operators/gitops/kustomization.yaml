@@ -6,4 +6,4 @@ resources:
   - ../../governance/placements/placement-prod.yaml
 
 generators:
-  - ../operators/gitops/generator.yaml
+  - ./generator.yaml
